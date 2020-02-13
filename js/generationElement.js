@@ -12,4 +12,24 @@ function genereSlider(){
         divSlider.id = "slide-" + (i + 1);
         sectionSlider.appendChild(divSlider);
     }
+
+        let index = 0;
+    
+        setTimeout(function(){
+            cliquerSlide(boutonsSlider,index);
+        },3000);
+    
+    
+}
+
+
+function cliquerSlide(boutonsSlider,index){
+    if(index >= 5){
+        index = 0;
+    }
+    boutonsSlider[index].click();
+    index++;
+    setTimeout(function(){
+        cliquerSlide(boutonsSlider,index);
+    },3000);
 }
