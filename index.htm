@@ -8,8 +8,10 @@
     <title>Exercie #5</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
+
     <link href="https://fonts.googleapis.com/css?family=Poiret+One|Roboto&display=swap"
         rel="stylesheet">
+        <script src="js/generationElement.js"></script>
 </head>
 
 <body>
@@ -54,30 +56,13 @@
         <section class="mon-slider">
             <div class="slider">
                 <div class="slides">
-                    <div id="slide-1">
-                       <h2>Intro au css-slider</h2>
-                        <p>Petit slider CSS</p>
-                        
-
-                    </div>
-                    <div id="slide-2">
-                        2
-                    </div>
-                    <div id="slide-3">
-                        3
-                    </div>
-                    <div id="slide-4">
-                        4
-                    </div>
-                    <div id="slide-5">
-                        5
-                    </div>
+                    
                 </div>
-                <a href="#slide-1">1</a>
-                <a href="#slide-2">2</a>
-                <a href="#slide-3">3</a>
-                <a href="#slide-4">4</a>
-                <a href="#slide-5">5</a>
+                <a class ="boutonSlider" href="#slide-1">1</a>
+                <a class ="boutonSlider" href="#slide-2">2</a>
+                <a class ="boutonSlider" href="#slide-3">3</a>
+                <a class ="boutonSlider" href="#slide-4">4</a>
+                <a class ="boutonSlider" href="#slide-5">5</a>
             </div>
                  </section>
     </main>
@@ -128,5 +113,7 @@
             }
         })
     })
+
+    genereSlider();
 </script>
 </html>
