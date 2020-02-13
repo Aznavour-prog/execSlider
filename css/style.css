@@ -1041,10 +1041,32 @@ desktop : 4 colonnes
       scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
+  -webkit-transition: scale 1s;
+  transition: scale 1s;
   /*
 scroll-snap-points-x: repeat(300px);
 scroll-snap-type: mandatory;
 */
+}
+
+.slides > div:hover {
+  background-color: lightgrey;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.slides > div > img:hover {
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  border-radius: 25px;
+  border: 2px solid red;
+}
+
+.slides > div > img {
+  -webkit-transition: all 1s;
+  transition: all 1s;
 }
 
 .slides div {
@@ -1086,7 +1108,6 @@ scroll-snap-type: mandatory;
   width: 300px;
   height: 300px;
   margin-right: 50px;
-  border-radius: 10px;
   background: #eee;
   -webkit-transform-origin: center center;
           transform-origin: center center;
@@ -1190,5 +1211,41 @@ img {
   overflow: hidden;
 }
 
+@media screen and (max-width: 500px) {
+  .slider > a {
+    display: none;
+  }
+}
+
 /*-------------------------------------------------------------- */
+/* ------------------------------------------------------------
+# Anim_entete
+-------------------------------------------------------------- */
+@-webkit-keyframes animEntete {
+  from {
+    -webkit-transform: translateX(2000px);
+            transform: translateX(2000px);
+  }
+  to {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
+@keyframes animEntete {
+  from {
+    -webkit-transform: translateX(2000px);
+            transform: translateX(2000px);
+  }
+  to {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
+
+.animEntete {
+  -webkit-animation: animEntete 1s;
+          animation: animEntete 1s;
+}
+
+/* ------------------------------------------------------------*/
 /*# sourceMappingURL=style.css.map */
